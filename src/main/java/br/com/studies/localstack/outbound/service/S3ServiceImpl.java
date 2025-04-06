@@ -2,7 +2,6 @@ package br.com.studies.localstack.outbound.service;
 
 import br.com.studies.localstack.core.services.S3Service;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
