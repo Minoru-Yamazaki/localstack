@@ -1,6 +1,6 @@
 # Exemplos de conexões AWS usando o localstack
 
-## 1 - S3
+## S3
 <details>
 <summary></summary>
 
