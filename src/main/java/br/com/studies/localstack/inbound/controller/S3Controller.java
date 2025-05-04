@@ -1,4 +1,4 @@
-package br.com.studies.localstack.inbound;
+package br.com.studies.localstack.inbound.controller;
 
 import br.com.studies.localstack.core.services.S3Service;
 import lombok.RequiredArgsConstructor;
@@ -21,8 +21,6 @@ public class S3Controller {
     @PostMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         s3Service.uploadFile(file);
-//        return "Arquivo enviado para o S3 (LocalStack): " + key;
-
         return ResponseEntity.status(HttpStatusCode.CREATED).build();
     }
 

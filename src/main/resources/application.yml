@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    aws:
+      region: us-east-1
+      credentials:
+        access-key: test
+        secret-key: test
+        account-id: "000000000000"
+      bucket:
+        name: meu-bucket
+      sns:
+        endpoint: http://localhost:4566
+        topic-arn: "arn:aws:sns:us-east-1:000000000000:"
+        topic-1: topico-1
+      sqs:
+        queue-1: fila-1
+        queue-2: fila-2
+        endpoint: http://localhost:4566
+      s3:
+        endpoint: http://localhost:4566

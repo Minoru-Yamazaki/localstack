@@ -1,4 +1,4 @@
-package br.com.studies.localstack.outbound.config;
+package br.com.studies.localstack.outbound.s3.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,16 +17,16 @@ import java.net.URI;
 @Configuration
 public class S3Config {
 
-    @Value("${aws.accessKey}")
+    @Value("${spring.cloud.aws.credentials.access-key}")
     private String accessKey;
 
-    @Value("${aws.secretKey}")
+    @Value("${spring.cloud.aws.credentials.secret-key}")
     private String secretKey;
 
-    @Value("${aws.region}")
+    @Value("${spring.cloud.aws.region}")
     private String region;
 
-    @Value("${aws.s3.endpoint}")
+    @Value("${spring.cloud.aws.s3.endpoint}")
     private String s3Endpoint;
 
     @Bean
@@ -38,12 +38,12 @@ public class S3Config {
                 .overrideConfiguration(ClientOverrideConfiguration.builder().build())
                 .serviceConfiguration(S3Configuration.builder().pathStyleAccessEnabled(true).build());
 
-        // Configura o endpoint do LocalStack
         if (s3Endpoint != null && !s3Endpoint.isEmpty()) {
             builder.endpointOverride(URI.create(s3Endpoint));
         }
 
         return builder.build();
     }
+
 }
 

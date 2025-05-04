@@ -1,4 +1,4 @@
-package br.com.studies.localstack.outbound.service;
+package br.com.studies.localstack.outbound.s3.service;
 
 import br.com.studies.localstack.core.services.S3Service;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +25,7 @@ public class S3ServiceImpl implements S3Service {
 
     private final S3Client s3Client;
 
-    @Value("${aws.bucketName}")
+    @Value("${spring.cloud.aws.bucket.name}")
     private String bucketName;
 
     @Override
