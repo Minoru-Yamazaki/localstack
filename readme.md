@@ -53,7 +53,7 @@ curl --location 'http://localhost:8080/localstack/mensageria/enviar/topico-1' \
 }'
 ```
 
-Fluxo: Ao enviar a mensagem para o '**topico-1**' a mensagem é redirecionada aos subinscritos '**fila-1**' e '**fila-2**' que são consumidas pelos '**Listeners**' da aplicacao.
+Fluxo: Ao enviar a mensagem para o '**topico-1**' a mensagem é redirecionada aos subscritos '**fila-1**' e '**fila-2**' que são consumidas pelos '**Listeners**' da aplicacao.
 Logs da aplicação:
 ![img.png](arquivos/logs_sqs.png)
 
